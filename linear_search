@@ -1,0 +1,30 @@
+
+import java.util.*;
+
+public class linear {
+
+    public static int linear_search(int arr[], int key) {
+
+        for(int i = 0 ; i<arr.length; i++){
+            if(arr[i] == key){
+                return i;
+            }        
+        }
+        return -1;
+        
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int arra[] = new int[5];
+        for(int i = 0; i<5; i++){
+            arra[i] = sc.nextInt();
+        }
+        int key = 10;
+        int index = linear_search(arra, key);
+        System.out.println("The key is at index: " + index);
+        
+    }
+    
+}
