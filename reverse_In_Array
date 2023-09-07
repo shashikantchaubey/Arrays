@@ -1,0 +1,36 @@
+import java.util.*;
+public class reverseAnArray {
+
+    public static void reversefun(int number[]){
+        int first = 0, last = number.length - 1;
+
+        while(first<last){
+            int temp = number[first];
+            number[first]= number[last];
+            number[last] = temp;
+
+            first++;
+            last--;
+        }
+    }
+
+    public static void main(String args[]){
+
+        Scanner sc = new Scanner(System.in);
+        int number[] = new int[5];
+
+        System.out.print("Enter the array: ");
+        for(int i = 0; i<number.length;i++){
+
+            number[i] = sc.nextInt();
+        }
+        sc.close();
+        reversefun(number);
+
+        System.out.print("Reversed array are as follows: ");
+        for(int i = 0; i<number.length;i++){
+            System.out.print(number[i] + " ");
+        }
+    }
+    
+}
